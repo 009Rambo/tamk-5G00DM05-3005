@@ -2,10 +2,10 @@
 -- Date: 2023-11-21
 -- File: 013-query1.sql
 
-SELECT ename AS "Name"
-       , job AS "Job"
-       , hiredate AS "Hiring Date"
-       , empno AS "Employee Number"
+SELECT ename AS "name"
+       , job AS "job"
+       , hiredate AS "hiring date"
+       , empno AS "employee number"
 FROM   emp;
 
 
