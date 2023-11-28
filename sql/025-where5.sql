@@ -4,8 +4,8 @@
 
 
 
-SELECT ename AS "Employee Name"
-       , deptno AS "Department Number"
+SELECT ename AS "ename"
+       , deptno AS "deptno"
 FROM emp
 WHERE deptno IN (10, 30)
 ;
