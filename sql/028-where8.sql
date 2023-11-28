@@ -8,7 +8,7 @@ SELECT ename AS "ename"
        , COALESCE(comm, 0)
        AS "comm"
 FROM emp
-WHERE comm IS NOT NULL
+WHERE comm <> 0
 ;
 
 
