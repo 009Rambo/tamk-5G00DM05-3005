@@ -3,9 +3,9 @@
 -- File: 027-where7.sql
 
 
-SELECT ename AS "Employee Name"
-       , job AS "Job"
-       , sal AS "Salary"
+SELECT ename AS "ename"
+       , job AS "job"
+       , sal AS "sal"
 FROM emp
 WHERE (job = 'CLERK' OR job = 'ANALYST')
 AND
