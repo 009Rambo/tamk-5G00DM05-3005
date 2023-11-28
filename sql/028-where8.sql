@@ -3,10 +3,10 @@
 -- File: 028-where8.sql
 
 
-SELECT ename AS "Employee Name"
-       , sal AS "Salary"
+SELECT ename AS "ename"
+       , sal AS "sal"
        , COALESCE(comm, 0)
-       AS "Commission"
+       AS "comm"
 FROM emp
 WHERE comm IS NOT NULL
 ;
