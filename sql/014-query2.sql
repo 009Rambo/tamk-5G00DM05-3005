@@ -3,14 +3,10 @@
 -- File: 014-query2.sql
 
 SELECT
-  ename AS "ename",
-  (CASE
-    WHEN strftime('%m', hiredate) = '01' THEN sal
-    WHEN strftime('%m', hiredate) = '02' THEN sal
-    WHEN strftime('%m', hiredate) = '03' THEN sal
-    ELSE 0
-  END) AS "first quarter"
-FROM emp;
+    ename AS ename,
+    COALESCE(sal, 0) * 3 AS "first quarter"
+FROM
+    emp;
 
 
 -- End of file
