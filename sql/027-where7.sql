@@ -3,14 +3,14 @@
 -- File: 027-where7.sql
 
 
-SELECT ename AS "ename"
-       , job AS "job"
-       , sal AS "sal"
+SELECT ename
+       , job
+       , sal
 FROM emp
 WHERE (job = 'CLERK' OR job = 'ANALYST')
-AND
-sal NOT IN (1000, 5000)
+AND (sal <> 1000 AND sal <> 5000)
 ;
+
 
 
 -- End of file
