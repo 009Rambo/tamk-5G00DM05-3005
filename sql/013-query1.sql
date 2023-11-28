@@ -4,8 +4,8 @@
 
 SELECT ename AS "name"
        , job AS "job"
-       , hiredate AS "hiring date"
-       , empno AS "employee number"
+       , hiredate AS "hiredate"
+       , empno AS "empno"
 FROM   emp;
 
 
