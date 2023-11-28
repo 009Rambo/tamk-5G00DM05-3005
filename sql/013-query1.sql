@@ -2,7 +2,7 @@
 -- Date: 2023-11-21
 -- File: 013-query1.sql
 
-SELECT ename AS "name"
+SELECT ename AS "ename"
        , job AS "job"
        , hiredate AS "hiredate"
        , empno AS "empno"

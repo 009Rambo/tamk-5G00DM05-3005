@@ -2,8 +2,9 @@
 -- Date: 2023-11-21
 -- File: 014-query2.sql
 
-SELECT ename AS "ename"
-  , (CASE
+SELECT
+  ename AS "ename",
+  (CASE
     WHEN strftime('%m', hiredate) = '01' THEN sal
     WHEN strftime('%m', hiredate) = '02' THEN sal
     WHEN strftime('%m', hiredate) = '03' THEN sal
