@@ -3,8 +3,8 @@
 -- File: 022-where2.sql
 
 
-SELECT ename AS "Employee Name"
-       , deptno AS "Department Number"
+SELECT ename AS "ename"
+       , deptno AS "deptno"
 FROM emp
 WHERE empno = 7566
 ;
