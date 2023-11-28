@@ -3,8 +3,8 @@
 -- File: 023-where3.sql
 
 
-SELECT ename AS "Employee Name"
-       , sal AS "Salary"
+SELECT ename AS "ename"
+       , sal AS "sal"
 FROM emp
 WHERE sal < 1500 OR sal > 2850 OR sal IS NULL
 ;
