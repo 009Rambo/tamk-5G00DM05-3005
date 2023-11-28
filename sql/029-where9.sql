@@ -3,8 +3,8 @@
 -- File: 029-where9.sql
 
 
-SELECT ename AS "Employee Name"
-       , job AS "Job"
+SELECT ename AS "ename"
+       , job AS "job"
 FROM emp
 WHERE mgr IS NULL
 ;
