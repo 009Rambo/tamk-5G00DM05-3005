@@ -3,9 +3,9 @@
 -- File: 024-where4.sql
 
 
-SELECT ename AS "Employee Name"
-       , job AS "Job"
-       , hiredate AS "Hire Date"
+SELECT ename AS "ename"
+       , job AS "job"
+       , hiredate AS "hiredate"
 FROM emp
 WHERE hiredate BETWEEN '1981-02-20' AND '1981-05-01'
 ;
