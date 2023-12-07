@@ -4,16 +4,17 @@
 
 
 SELECT
-    ename AS "ename",
-    sal AS "sal",
-    sal * 1.15 AS "new salary"
+        ename AS "ename"
+    ,   sal AS "sal"
+    ,   sal * 1.15 AS "new salary"
 FROM
     emp
 WHERE
-    mgr = (SELECT empno FROM emp WHERE ename = 'BLAKE')
+    mgr = (SELECT empno FROM emp WHERE LOWER(ename) = LOWER('BLAKE'))
 ORDER BY
-    "new salary" ASC,
-    "ename" ASC;
+        "new salary" ASC
+    ,   "ename" ASC
+    ;
 
 
 -- End of file
