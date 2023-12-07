@@ -6,7 +6,7 @@
 SELECT
     empno AS "empno",
     ename AS "ename",
-    deptno AS "depno",
+    deptno AS "deptno",
     hiredate AS "hiredate"
 FROM
     emp
