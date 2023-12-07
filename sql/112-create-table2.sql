@@ -3,9 +3,9 @@
 -- File: 112-create-table2.sql
 
 CREATE TABLE football (
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
-    Coach_first_name TEXT,
-    coach_last_name TEXT,
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
+    first TEXT,
+    last TEXT,
     team TEXT,
     comment TEXT
 );
