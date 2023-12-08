@@ -10,7 +10,7 @@ SELECT
 FROM
     emp
 WHERE
-    UPPER(mgr) = (SELECT UPPER(empno) FROM emp WHERE UPPER(ename) = UPPER('BLAKE'))
+    mgr = (SELECT empno FROM emp WHERE ename = UPPER('BLAKE'))
 ORDER BY
     "new salary" ASC,
     "ename" ASC;
