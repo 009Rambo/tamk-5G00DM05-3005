@@ -9,12 +9,12 @@ SELECT
 FROM
     emp
 WHERE
-    UPPER(SUBSTR(ename, 2, 1)) IN ('A', 'E', 'I', 'O', 'U','Y')
-    AND job LIKE LOWER('SALESMAN') OR job like LOWER('ANALYST')
-
+    UPPER(SUBSTR(ename, 2, 1)) IN ('A', 'E', 'I', 'O', 'U', 'Y')
+    AND (UPPER(job) LIKE '%SALES%' OR UPPER(job) LIKE '%ANALYST%')
 ORDER BY
     deptno ASC,
     ename ASC;
+
 
 
 
