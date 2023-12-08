@@ -7,7 +7,7 @@ CREATE TABLE weather (
     time_of_reading TEXT,
     high NUMERIC,
     low NUMERIC,
-    sig CHAR(2),
+    sig TEXT(2),
     comment TEXT
 );
 
