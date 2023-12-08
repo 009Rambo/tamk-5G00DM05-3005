@@ -12,7 +12,8 @@ FROM
 WHERE
     mgr = (SELECT empno FROM emp WHERE ename = ('BLAKE'))
 ORDER BY
-    "new salary" ASC;
+    "new salary" ASC,
+     "ename" ASC;
 
 
 
