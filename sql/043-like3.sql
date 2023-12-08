@@ -8,10 +8,10 @@ SELECT
 FROM
     emp
 WHERE
-    ename LIKE '%L%L%' 
+    ename LIKE LOWER('%L%L%')
     AND (deptno = 10 OR mgr = 7782)
 ORDER BY
-    ename ASC;
+    ename;
 
 
 
