@@ -8,6 +8,7 @@ CREATE TABLE football (
     first VARCHAR(255),
     team VARCHAR(255),
     comment VARCHAR(255)
+
 );
 
 
