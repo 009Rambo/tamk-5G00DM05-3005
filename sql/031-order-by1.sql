@@ -10,10 +10,10 @@ SELECT
 FROM
     emp
 WHERE
-    mgr = (SELECT empno FROM emp WHERE ename = UPPER('BLAKE'))
+    mgr = (SELECT empno FROM emp WHERE ename = ('BLAKE'))
 ORDER BY
-    "new salary" ASC,
-    "ename" ASC;
+    "new salary" ASC;
+
 
 
 
