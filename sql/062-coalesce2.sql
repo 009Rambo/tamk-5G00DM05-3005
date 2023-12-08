@@ -9,8 +9,7 @@ SELECT
 FROM
     emp
 ORDER BY
-    "Net Income" ASC,
-    ename ASC;
+    "Net Income" ASC;
 
 
 -- End of file
