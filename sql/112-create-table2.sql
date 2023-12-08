@@ -4,10 +4,10 @@
 
 CREATE TABLE football (
     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
-    first TEXT,
-    last TEXT,
-    team TEXT,
-    comment TEXT
+    last VARCHAR(255),
+    first VARCHAR(255),
+    team VARCHAR(255),
+    comment VARCHAR(255)
 );
 
 
