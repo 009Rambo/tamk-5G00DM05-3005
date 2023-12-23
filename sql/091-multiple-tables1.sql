@@ -7,13 +7,14 @@ SELECT
     e.deptno AS "Department Number",
     LOWER(d.dname) AS "Department Name"
 FROM
-    emp e
+    emp AS e 
 JOIN
-    dept d ON e.deptno = d.deptno
+    dept AS d ON e.deptno = d.deptno
 WHERE
     LOWER(d.loc) = 'dallas' OR UPPER(e.job) = 'SALESMAN'
 ORDER BY
     "Employee Name" ASC;
+
 
 -- End of file
 
