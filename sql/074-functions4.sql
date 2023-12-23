@@ -8,7 +8,8 @@ SELECT
 FROM
     emp
 ORDER BY
-    ename ASC, job ASC;
+    LOWER(ename) ASC, LOWER(job) ASC;
+
 
 
 -- End of file
