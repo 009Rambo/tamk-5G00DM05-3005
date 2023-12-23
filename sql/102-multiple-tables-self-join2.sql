@@ -2,26 +2,21 @@
 -- Date: 2023-12-23
 -- File: 102-multiple-tables-self-join2.sql
 
-SELECT DISTINCT
-    Dept,
-    Employee,
-    Colleague
-FROM (
-    SELECT
-        e.deptno AS "Dept",
-        CASE WHEN e1.ename < e2.ename THEN e1.ename ELSE e2.ename END AS "Employee",
-        CASE WHEN e1.ename < e2.ename THEN e2.ename ELSE e1.ename END AS "Colleague"
-    FROM
-        emp AS e
-    JOIN
-        emp AS e1 ON e.deptno = e1.deptno
-    JOIN
-        emp AS e2 ON e.deptno = e2.deptno
-    WHERE
-        e1.empno < e2.empno
-) AS T
+SELECT
+    d.deptno AS "Dept",
+    e.ename AS "Employee",
+    e1.ename AS "Colleague"
+FROM
+    Dept d
+JOIN
+    emp e ON d.deptno = e.deptno
+JOIN
+    emp e1 ON d.deptno = e1.deptno AND e.empno < e1.empno
 ORDER BY
-    "Dept" ASC, "Employee" ASC, "Colleague" ASC;
+    d.deptno ASC,
+    e.ename ASC,
+    e1.ename ASC;
+
 
 -- End of file
 
