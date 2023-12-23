@@ -3,14 +3,11 @@
 -- File: 081-group-functions1.sql
 
 SELECT
-    job AS "Job Title",
-    COUNT(*) AS "Count of Managers"
+    COUNT(DISTINCT empno) AS "count of managers"
 FROM
     emp
 WHERE
-    UPPER(job) IN ('MANAGER', 'PRESIDENT')
-GROUP BY
-    job;
+    UPPER(job) IN ('MANAGER', 'PRESIDENT');
 
 
 -- End of file
