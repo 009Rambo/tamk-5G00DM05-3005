@@ -3,10 +3,10 @@
 -- File: 095-multiple-tables5.sql
 
 SELECT
-    e.ename AS "Employee Name",
-    e.job AS "Job",
-    e.deptno AS "Department Number",
-    d.dname AS "Department Name"
+    e.ename AS "ename",
+    e.job AS "job",
+    e.deptno AS "deptno",
+    d.dname AS "dname"
 FROM
     emp e
 JOIN
@@ -16,6 +16,6 @@ WHERE
     OR (UPPER(d.dname) = 'SALES' AND e.sal > 1000)
     OR (UPPER(d.dname) = 'OPERATIONS' AND e.sal > 1000)
 ORDER BY
-    "Employee Name" ASC;
+    "ename" ASC;
 
 -- End of file
