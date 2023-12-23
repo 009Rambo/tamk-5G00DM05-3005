@@ -8,9 +8,9 @@ SELECT
     emp.ename AS "Employee",
     emp.empno AS "Emp#"
 FROM
-    emp mgr
+    emp AS mgr 
 JOIN
-    emp emp ON mgr.empno = emp.mgr
+    emp AS emp ON mgr.empno = emp.mgr
 WHERE
     mgr.ename IN ('BLAKE', 'FORD', 'SCOTT')
 ORDER BY
