@@ -3,9 +3,9 @@
 -- File: 093-multiple-tables3.sql
 
 SELECT
-    e.ename AS "Employee Name",
-    d.dname AS "Department Name",
-    d.loc AS "Location"
+    e.ename AS "ename",
+    d.dname AS "dname",
+    d.loc AS "location"
 FROM
     emp e
 JOIN
@@ -13,6 +13,6 @@ JOIN
 WHERE
     e.comm IS NOT NULL
 ORDER BY
-    "Employee Name" ASC;
+    "ename" ASC;
 
 -- End of file
