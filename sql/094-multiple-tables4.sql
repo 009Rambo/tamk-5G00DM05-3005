@@ -3,8 +3,8 @@
 -- File: 094-multiple-tables4.sql
 
 SELECT
-    e.ename AS "Employee Name",
-    d.dname AS "Department Name"
+    e.ename AS "ename",
+    d.dname AS "dname"
 FROM
     emp e
 JOIN
@@ -12,7 +12,7 @@ JOIN
 WHERE
     LOWER(e.ename) LIKE '%a%' AND e.sal > 1100 AND e.sal <= 2200
 ORDER BY
-    "Employee Name" ASC;
+    "ename" ASC;
 
 -- End of file
 
