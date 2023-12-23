@@ -5,9 +5,9 @@
 SELECT DISTINCT
     emp.ename AS "Employee Name"
 FROM
-    emp
+    emp AS emp
 JOIN
-    emp manager ON emp.mgr = manager.empno
+    emp AS manager ON emp.mgr = manager.empno
 WHERE
     emp.sal > manager.sal
    AND emp.comm IS NULL
