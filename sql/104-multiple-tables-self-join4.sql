@@ -2,19 +2,19 @@
 -- Date: 2023-12-23
 -- File: 104-multiple-tables-self-join4.sql
 
- SELECT
+SELECT
     d.loc AS "Location",
     d.dname AS "Department",
     e.ename AS "Employee",
     m.ename AS "Manager"
 FROM
-    emp e
+    emp AS e
 JOIN
-    emp m ON e.mgr = m.empno
+    emp AS m ON e.mgr = m.empno
 JOIN
-    dept d ON e.deptno = d.deptno
+    dept AS d ON e.deptno = d.deptno
 JOIN
-    salgrade sg ON e.sal BETWEEN sg.losal AND sg.hisal
+    salgrade AS sg ON e.sal BETWEEN sg.losal AND sg.hisal
 WHERE
     LOWER(m.ename) IN ('blake', 'ford', 'jones')
     AND m.sal > sg.hisal
