@@ -17,9 +17,10 @@ JOIN
     salgrade sg ON e.sal BETWEEN sg.losal AND sg.hisal
 WHERE
     LOWER(m.ename) IN ('blake', 'ford', 'jones')
-    AND m.sal > sg.hisal 
+    AND m.sal > sg.hisal
 ORDER BY
     "Location" ASC, "Manager" ASC, "Employee" ASC;
+
 
 -- End of file
 
