@@ -3,7 +3,7 @@
 -- File: 092-multiple-tables2.sql
 
 SELECT DISTINCT
-    e.job AS "Job Name"
+    e.job AS "job"
 FROM
     emp e
 JOIN
@@ -11,6 +11,6 @@ JOIN
 WHERE
     UPPER(d.loc) IN ('BOSTON', 'NEW YORK')
 ORDER BY
-    "Job Name" ASC;
+    "job" ASC;
 
 -- End of file
