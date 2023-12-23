@@ -18,6 +18,7 @@ JOIN
 WHERE
     LOWER(m.ename) IN ('blake', 'ford', 'jones')
     AND m.sal > sg.hisal
+    AND e.sal BETWEEN sg.losal AND sg.hisal 
 ORDER BY
     "Location" ASC, "Manager" ASC, "Employee" ASC;
 
