@@ -3,7 +3,7 @@
 -- File: 103-multiple-tables-self-join3.sql
 
 SELECT DISTINCT
-    emp.ename AS "Employee Name"
+    emp.ename AS "ename"
 FROM
     emp AS emp
 JOIN
@@ -12,7 +12,7 @@ WHERE
     emp.sal > manager.sal
    AND emp.comm IS NULL
 ORDER BY
-    "Employee Name" ASC;
+    "ename" ASC;
 
 -- End of file
 
