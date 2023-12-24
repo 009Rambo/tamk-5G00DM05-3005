@@ -7,11 +7,11 @@ SELECT
     e.ename AS "Employee",
     e1.ename AS "Colleague"
 FROM
-    dept d
+    dept AS d
 JOIN
-    emp e ON d.deptno = e.deptno
+    emp AS e ON d.deptno = e.deptno
 JOIN
-    emp e1 ON d.deptno = e1.deptno AND e.empno < e1.empno
+    emp AS e1 ON d.deptno = e1.deptno AND e.empno < e1.empno
 ORDER BY
     d.deptno ASC,
     e.ename ASC,
