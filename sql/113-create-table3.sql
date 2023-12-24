@@ -7,8 +7,8 @@ CREATE TABLE weather (
     time_of_reading VARCHAR(255) NOT NULL,
     high NUMERIC,
     low NUMERIC,
-    sig VARCHAR(2),
-    comment VARCHAR(512) NOT NULL
+    sig TEXT(2) NOT NULL,
+    comment VARCHAR(512) NULL
 );
 
 
