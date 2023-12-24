@@ -2,23 +2,20 @@
 -- Date: 2023-12-23
 -- File: 104-multiple-tables-self-join4.sql
 
-SELECT
+SELECT DISTINCT
     d.loc AS "Location",
     d.dname AS "Department",
     e.ename AS "Employee",
     m.ename AS "Manager"
 FROM
-    emp AS e
+    emp e
 JOIN
-    emp AS m ON e.mgr = m.empno
+    emp m ON e.mgr = m.empno
 JOIN
-    dept AS d ON e.deptno = d.deptno
-JOIN
-    salgrade AS sg ON e.sal BETWEEN sg.losal AND sg.hisal
+    dept d ON e.deptno = d.deptno
 WHERE
-    LOWER(m.ename) IN ('blake', 'ford', 'jones')
-    AND m.sal > sg.hisal
-    AND e.sal BETWEEN sg.losal AND sg.hisal 
+    m.ename IN ('BLAKE', 'FORD', 'JONES')
+    AND m.sal > (SELECT MAX(hisal) FROM salgrade WHERE grade = 3)
 ORDER BY
     "Location" ASC, "Manager" ASC, "Employee" ASC;
 
