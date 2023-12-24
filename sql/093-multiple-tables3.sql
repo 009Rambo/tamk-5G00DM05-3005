@@ -6,13 +6,12 @@ SELECT
     e.ename AS "ename",
     d.dname AS "dname",
     d.loc AS "loc"
-    comm AS "comm"
 FROM
     emp AS e
 JOIN
     dept AS d ON e.deptno = d.deptno
 WHERE
-    e.comm IS NOT NULL
+    e.comm IS NOT NULL AND e.comm > 100 
 ORDER BY
     "ename" ASC;
 
