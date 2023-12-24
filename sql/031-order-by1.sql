@@ -12,11 +12,9 @@ FROM
 JOIN
     emp m ON e.mgr = m.empno
 WHERE
-    m.ename = 'BLAKE'
+    LOWER(m.ename) = 'blake'
 ORDER BY
     "new salary" ASC, e.ename ASC;
-
-
 
 
 -- End of file
