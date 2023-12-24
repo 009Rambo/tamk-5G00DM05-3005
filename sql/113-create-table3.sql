@@ -4,13 +4,12 @@
 
 CREATE TABLE weather (
     id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
-    time_of_reading VARCHAR(255),
-    high NUMERIC,
-    low NUMERIC,
-    sig VARCHAR(2),
-    comment VARCHAR(255)
+    time_of_reading TEXT,
+    high REAL,
+    low REAL,
+    sig TEXT(2),
+    comment TEXT
 );
-
 
 
 -- End of file
