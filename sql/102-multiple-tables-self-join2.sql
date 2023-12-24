@@ -7,7 +7,7 @@ SELECT
     e.ename AS "Employee",
     e1.ename AS "Colleague"
 FROM
-    Dept d
+    dept d
 JOIN
     emp e ON d.deptno = e.deptno
 JOIN
@@ -16,6 +16,7 @@ ORDER BY
     d.deptno ASC,
     e.ename ASC,
     e1.ename ASC;
+
 
 
 -- End of file
