@@ -17,7 +17,7 @@ JOIN
     salgrade AS sg ON m.sal > sg.hisal
 WHERE
     LOWER(m.ename) IN ('blake', 'ford', 'jones')
-    AND m.sal > (SELECT MAX(sgh.hisal) FROM salgrade sgh WHERE sgh.grade = 3)
+    AND m.sal > (SELECT MAX(sg.hisal) FROM salgrade sg WHERE sg.grade = 3)
 ORDER BY
     "Location" ASC, "Manager" ASC, "Employee" ASC;
 
