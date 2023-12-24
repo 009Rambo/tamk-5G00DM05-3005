@@ -4,16 +4,17 @@
 
 
 SELECT
-    ename AS "ename",
-    sal AS "sal",
-    sal * 1.15 AS "new salary"
+    e.ename AS "ename",
+    e.sal AS "sal",
+    e.sal * 1.15 AS "new salary"
 FROM
-    emp
+    emp e
+JOIN
+    emp m ON e.mgr = m.empno
 WHERE
-    mgr = (SELECT empno FROM emp WHERE ename = ('BLAKE'))
+    m.ename = 'BLAKE'
 ORDER BY
-    "new salary" ASC,
-     "ename" ASC;
+    "new salary" ASC, e.ename ASC;
 
 
 
