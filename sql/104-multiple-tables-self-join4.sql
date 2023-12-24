@@ -13,7 +13,7 @@ FROM
     JOIN dept AS d ON e.deptno = d.deptno
     JOIN salgrade AS sg ON m.sal > sg.losal AND sg.grade = 3
 WHERE
-    LOWER(m.ename) IN ('blake', 'ford', 'jones')
+    LOWER(m.ename) IN ('blake', 'ford', 'jones') AND sg.grade = 3
 ORDER BY
     "Location" ASC, "Manager" ASC, "Employee" ASC;
 
