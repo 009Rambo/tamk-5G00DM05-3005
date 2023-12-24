@@ -3,11 +3,11 @@
 -- File: 112-create-table2.sql
 
 CREATE TABLE football (
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
-    last VARCHAR(255),
-    first VARCHAR(255),
-    team VARCHAR(255),
-    comment VARCHAR(512) DEFAULT 'N/A'
+  id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
+  last VARCHAR(255),
+  first VARCHAR(255),
+  team VARCHAR(255),
+  comment TEXT NULL
 );
 
 
