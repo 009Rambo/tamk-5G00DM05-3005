@@ -4,8 +4,8 @@
 
 SELECT
     ename AS "Name",
-    COALESCE((IFNULL(sal, 0) - (IFNULL(sal, 0) * 0.31)), 0) + COALESCE((IFNULL(comm, 0) - (IFNULL(comm, 0) * 0.2)), 0) AS "Net Income",
-    COALESCE((IFNULL(sal, 0) * 0.31), 0) + COALESCE((IFNULL(comm, 0) * 0.2), 0) AS "Tax"
+    COALESCE((COALESCE(sal, 0) - (COALESCE(sal, 0) * 0.31)), 0) + COALESCE((COALESCE(comm, 0) - (COALESCE(comm, 0) * 0.2)), 0) AS "Net Income",
+    COALESCE((COALESCE(sal, 0) * 0.31), 0) + COALESCE((COALESCE(comm, 0) * 0.2), 0) AS "Tax"
 FROM
     emp
 ORDER BY
