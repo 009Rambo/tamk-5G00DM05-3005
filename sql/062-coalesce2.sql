@@ -4,8 +4,8 @@
 
 SELECT
     ename AS "Name",
-    ROUND(COALESCE(sal, 0) - COALESCE(sal, 0) * 0.31, 2) AS "Net Income",
-    ROUND(COALESCE(sal, 0) * 0.31, 2) AS "Tax"
+    (sal - (sal * 0.31)) + COALESCE(comm - (comm * 0.2), 0) AS "Net Income",
+    (sal * 0.31) + COALESCE(comm * 0.2, 0) AS "Tax"
 FROM
     emp
 ORDER BY
