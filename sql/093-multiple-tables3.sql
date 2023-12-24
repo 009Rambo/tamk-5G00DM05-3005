@@ -5,7 +5,7 @@
 SELECT
     e.ename AS "ename",
     d.dname AS "dname",
-    d.loc AS "location"
+    d.loc AS "loc"
 FROM
     emp AS e
 JOIN
