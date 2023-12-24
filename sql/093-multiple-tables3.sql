@@ -6,6 +6,7 @@ SELECT
     e.ename AS "ename",
     d.dname AS "dname",
     d.loc AS "loc"
+    comm AS "comm"
 FROM
     emp AS e
 JOIN
