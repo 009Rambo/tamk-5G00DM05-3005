@@ -3,14 +3,13 @@
 -- File: 113-create-table3.sql
 
 CREATE TABLE weather (
-    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
-    time_of_reading VARCHAR(255) NOT NULL,
-    high NUMERIC,
-    low NUMERIC,
-    sig TEXT(2) NOT NULL,
-    comment VARCHAR(512) NULL
+  id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
+  time_of_reading TIMESTAMP NOT NULL,
+  high NUMERIC,
+  low NUMERIC,
+  sig CHAR(2) NOT NULL,
+  comment VARCHAR(512) DEFAULT NULL
 );
-
 
 -- End of file
 
