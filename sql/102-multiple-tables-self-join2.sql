@@ -2,7 +2,7 @@
 -- Date: 2023-12-23
 -- File: 102-multiple-tables-self-join2.sql
 
-SELECT DISTINCT
+SELECT
     d.deptno AS "Dept",
     e.ename AS "Employee",
     e1.ename AS "Colleague"
@@ -11,13 +11,12 @@ FROM
 JOIN
     emp AS e ON d.deptno = e.deptno
 JOIN
-    emp AS e1 ON d.deptno = e1.deptno AND e.empno < e1.empno
-WHERE
-    e.ename <> e1.ename
+    emp AS e1 ON d.deptno = e1.deptno AND e.empno <> e1.empno
 ORDER BY
-    d.deptno ASC,
-    e.ename ASC,
-    e1.ename ASC;
+    "Dept" ASC,
+    "Employee" ASC,
+    "Colleague" ASC;
+
 
 
 -- End of file
