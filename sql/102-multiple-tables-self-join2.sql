@@ -2,7 +2,7 @@
 -- Date: 2023-12-23
 -- File: 102-multiple-tables-self-join2.sql
 
-SELECT
+SELECT DISTINCT
     d.deptno AS "Dept",
     e.ename AS "Employee",
     e1.ename AS "Colleague"
