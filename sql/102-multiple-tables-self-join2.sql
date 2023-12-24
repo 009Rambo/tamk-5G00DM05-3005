@@ -13,7 +13,7 @@ JOIN
 JOIN
     emp AS e1 ON d.deptno = e1.deptno AND e.empno < e1.empno
 WHERE
-    e.ename != e1.ename  
+    e.ename <> e1.ename
 ORDER BY
     d.deptno ASC,
     e.ename ASC,
