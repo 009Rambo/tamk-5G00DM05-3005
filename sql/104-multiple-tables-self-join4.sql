@@ -15,12 +15,12 @@ JOIN
     dept AS d ON e.deptno = d.deptno
 JOIN
     salgrade AS sg ON m.sal > sg.hisal
+JOIN
+    (SELECT MAX(hisal) AS max_hisal FROM salgrade WHERE grade = 3) AS max_sal ON m.sal > max_sal.max_hisal
 WHERE
     LOWER(m.ename) IN ('blake', 'ford', 'jones')
-    AND m.sal > (SELECT MAX(sg.hisal) FROM salgrade sg WHERE sg.grade = 3)
 ORDER BY
     "Location" ASC, "Manager" ASC, "Employee" ASC;
-
 
 
 -- End of file
