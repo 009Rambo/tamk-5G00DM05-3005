@@ -7,7 +7,7 @@ CREATE TABLE football (
   last VARCHAR(255),
   first VARCHAR(255),
   team VARCHAR(255),
-  comment NVARCHAR(255) NULL
+  comment TEXT 
 );
 
 
