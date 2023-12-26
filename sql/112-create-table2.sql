@@ -6,9 +6,8 @@ CREATE TABLE football (
   id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL UNIQUE,
   last VARCHAR(255),
   first VARCHAR(255),
-  team VARCHAR(255),
+  team VARCHAR(255) NOT NULL,
   comment TEXT
-
 );
 
 
