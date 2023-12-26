@@ -7,9 +7,19 @@ CREATE TABLE weather (
   time_of_reading TIMESTAMP NOT NULL,
   high NUMERIC,
   low NUMERIC,
-  sig TEXT CHECK(LENGTH(sig) = 2),
+  sig TEXT NOT NULL,
   comment VARCHAR(255)
 );
+
+CREATE TRIGGER sig_length_check
+BEFORE INSERT OR UPDATE
+ON weather
+FOR EACH ROW
+BEGIN
+  IF (LENGTH(NEW.sig) <> 2) THEN
+    RAISE EXCEPTION 'The SIG column must be of length 2';
+  END IF;
+END;
 
 
 -- End of file
