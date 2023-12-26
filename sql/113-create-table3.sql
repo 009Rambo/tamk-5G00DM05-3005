@@ -7,7 +7,7 @@ CREATE TABLE weather (
   time_of_reading TIMESTAMP NOT NULL,
   high NUMERIC,
   low NUMERIC,
-  sig TEXT CHECK(regexp_match(sig, '^[A-Z]{2}$') IS NOT NULL) NOT NULL,
+  sig CHAR(2) NOT NULL,
   comment VARCHAR(255)
 );
 
