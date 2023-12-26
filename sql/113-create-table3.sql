@@ -7,7 +7,7 @@ CREATE TABLE weather (
   time_of_reading TIMESTAMP NOT NULL,
   high NUMERIC,
   low NUMERIC,
-  sig VARCHAR CHECK(length(sig) = 2 AND typeof(sig) = 'text') NOT NULL,
+  sig TEXT CHECK(LENGTH(sig) = 2),
   comment VARCHAR(255)
 );
 
