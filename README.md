@@ -12,6 +12,9 @@ Date: 12.01.2024
 
 ## Instructions for Setup and Run
 
+### Cloning the repository 
+git clone https://github.com/009Rambo/tamk-5G00DM05-3005.git
+
 NOTE: *before starting the setup check if you have node.js in your machine
 with command "node -v"*
 
