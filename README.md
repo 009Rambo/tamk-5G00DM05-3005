@@ -1,3 +1,6 @@
+# About 
+This project was backend part of full stack web development course.
+
 ## Author Info
 
 Name: Ramesh Pandey
